@@ -98,6 +98,35 @@
             100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
         }
 
+        @media (max-width: 480px) {
+            .problem-container {
+                flex-direction: row; /* Ensure horizontal alignment */
+                align-items: center;
+                justify-content: center;
+                gap: 5px; /* Reduce space between elements */
+            }
+
+            .problem {
+                font-size: 48px; /* Reduce font size */
+            }
+
+            .equals {
+                font-size: 48px;
+                margin: 0 5px;
+            }
+
+            input {
+                font-size: 36px;
+                width: 80px; /* Shrink width */
+                height: 50px;
+                padding: 5px;
+            }
+
+            .stats {
+                font-size: 16px; /* Shrink text for timer and score */
+            }
+        }
+
         .summary {
             display: none;
             background-color: white;
