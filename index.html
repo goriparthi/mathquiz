@@ -265,9 +265,10 @@
 		    const b = Math.floor(Math.random() * Math.min(10, 29 - a)); // b is between 0 and 9, but limited to keep sum ≤ 29
 		    problem = { text: `${a} + ${b}`, answer: a + b };
                 } else {
-                    const a = Math.floor(Math.random() * maxNumber) + 2;
-                    const b = Math.floor(Math.random() * (a - 1)) + 1;
+                    const a = Math.floor(Math.random() * 19) + 1; // a is between 1 and 19
+                    const b = Math.floor(Math.random() * Math.min(11, a)) + 1; // b is between 1 and min(11, a), ensuring a - b is never negative
                     problem = { text: `${a} - ${b}`, answer: a - b };
+
                 }
             } while (recentProblems.includes(problem.text));
 
